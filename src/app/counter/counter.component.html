@@ -1,0 +1,9 @@
+<div class="main">
+    <h2>Counter</h2>
+    <div class="counter" [style.color]="getCounterColor()">{{count}}</div>
+    <div class="buttons">
+        <button class="add" (click)="addCount()">Add</button>
+        <button class="refresh" (click)="refreshCount()">Refresh</button>
+        <button class="substract" (click)="lowerCount()">Substract</button>
+    </div>
+</div>

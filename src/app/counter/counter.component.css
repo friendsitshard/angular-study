@@ -1,0 +1,49 @@
+.main{
+    margin: auto;
+    margin-top: 20px;
+    width: fit-content;
+    border: 2px black solid;
+    border-radius: 7px;
+    padding: 20px;
+    background-color: #20b2aa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+button{
+    border: none;
+    background-color: grey;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 15px;
+}
+
+.buttons{
+    display: flex;
+    column-gap: 5px;
+}
+
+h2{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.counter{
+    margin: 20px 0px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.add:hover{
+    color: green;
+}
+
+.substract:hover{
+    color: red;
+}
+
+.refresh:hover{
+    color: black;
+}
