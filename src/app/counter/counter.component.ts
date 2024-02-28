@@ -10,9 +10,6 @@ import { Component } from '@angular/core';
 })
 export class CounterComponent {
   count:number = 0
-  add:string = "add"
-  substract:string = "substract"
-  refresh:string = "refresh"
 
   addCount(){
     this.count++
@@ -36,7 +33,6 @@ export class CounterComponent {
     else{
       return "black"
     }
-
   }
 
 }
