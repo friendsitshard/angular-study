@@ -67,7 +67,7 @@ export class CartComponent {
       this.sum += item.price * item.quantity
     });
 
-    return this.sum/200
+    return this.sum/100
   }
 
   countDiscount(){

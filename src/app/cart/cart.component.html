@@ -41,7 +41,7 @@
                 <div >Discount: ${{disc * countSubtotal()}}</div>
                 <div>Tax: ${{countTax()}}</div>
                 <div class="line"></div>
-                <h4>Total: ${{countSubtotal() + countTax() - disc * countSubtotal()}}</h4>
+                <h4>Total: ${{countSubtotal() - disc * countSubtotal() + countTax()}}</h4>
                 <div class="btn checkout-btn">Checkout</div>
             </div>
         </div>
