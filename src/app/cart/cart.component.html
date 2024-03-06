@@ -1,0 +1,49 @@
+<div class="main">
+    <h1>My cart({{items.length}})</h1>
+    <div class="bot">
+        <div class="cart">
+            <div *ngFor="let item of items; let i = index"  class="cart-item">
+                <div class="cart-left">
+                    <div class="img" [style.background-color]="item.color"></div>
+                    <div>
+                        <h4>{{item.title}}</h4>
+                        <p>Size: {{item.size}}, Color: {{item.color}}, Material: {{item.material}}</p>
+                        <p>Seller: {{item.seller}}</p>
+                        <div class="btn remove-btn" (click)="removeItem(i)">Remove</div>
+                    </div>
+                </div>
+                <div class="cart-right">
+                    <div class="price">${{item.price}}</div>
+                    <div class="qty">
+                        <div>Qty: {{item.quantity}}</div>
+                        <div class="change-qty">
+                            <div class="plus" (click)="addQty(i)">+</div>
+                            <div class="minus" (click)="minusQty(i)">-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btns">
+                <div class="btn back-btn" (click)="reload()"><i class="bi bi-arrow-left"></i> Back to shop</div>
+                <div class="btn remove-all-btn" (click)="removeAll()">Remove all</div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="coupon">
+                <p>Have a coupon?</p>
+                <div class="">
+                    <input type="text" placeholder="Add coupon" [(ngModel)]="coupon">
+                    <button class="apply-btn" (click)="countDiscount()">Apply</button>
+                </div>
+            </div>
+            <div class="amount">
+                <div>Subtotal: ${{countSubtotal()}}</div>
+                <div >Discount: ${{disc * countSubtotal()}}</div>
+                <div>Tax: ${{countTax()}}</div>
+                <div class="line"></div>
+                <h4>Total: ${{countSubtotal() + countTax() - disc * countSubtotal()}}</h4>
+                <div class="btn checkout-btn">Checkout</div>
+            </div>
+        </div>
+    </div>
+</div>

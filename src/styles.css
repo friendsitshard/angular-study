@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@font-face {
+    font-family: monsterat;
+    src: url(assets/Montserrat-VariableFont_wght.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: monsterat;
+}
+
+body{
+    background-color: #f7fafc;
+    padding: 0;
+    margin: 0;
+}
